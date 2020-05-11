@@ -41,3 +41,4 @@ describe('<Bomb />', () => {
     expect(wrapper.text()).to.equal('Boom!');
   });
 });
+
