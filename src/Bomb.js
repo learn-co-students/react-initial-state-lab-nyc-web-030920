@@ -1,17 +1,18 @@
-// your Bomb code here!
-export default class Bomb extends Component{
-    ifBoom(props){
-        let numReturn= `${props} seconds left before I go boom!`
-        props ? numReturn : "Boom!"
-    }
+import React from 'react';
+export default class Bomb extends React.Component {
+ 
     
-    constructor(){
+    constructor(props){
         super()
         this.state={
             secondsLeft : props.initialCount
         }
     }
     render(){
-        this.ifBoom(props.initialCount)
+        return(<div>{this.ifBoom(this.props.initialCount)}</div>)
+    }
+    ifBoom(props){
+        let numReturn= `${props} seconds left before I go boom!`
+        return props ? numReturn : "Boom!"
     }
 }
